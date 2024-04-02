@@ -22,7 +22,7 @@ const Welcome = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello LostArrows27</Text>
+        <Text style={styles.userName}>Hellos LostArrows27</Text>
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
 
@@ -51,8 +51,9 @@ const Welcome = () => {
           contentContainerStyle={{ columnGap: SIZES.small }}
           horizontal
           keyExtractor={(item) => item}
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <TouchableOpacity
+              key={index}
               onPress={() => {
                 setActiveJobType(item);
                 router.push(`/search/${item}`);

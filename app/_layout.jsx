@@ -6,7 +6,7 @@ import { useCallback } from "react";
 import * as SpashScreen from "expo-splash-screen";
 import { Text, View } from "react-native";
 
-// TODO: make load screen visiable while loading
+// NOTE: make load screen visiable while loading
 SpashScreen.preventAutoHideAsync();
 
 const Layout = () => {
@@ -22,7 +22,7 @@ const Layout = () => {
     }
   }, [fontsLoaded]);
 
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded) return undefined;
 
   return <Stack onLayout={onLayoutRootView} />;
 };
